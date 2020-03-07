@@ -122,7 +122,7 @@ inline bool is_valid_port(string_view::const_iterator it) {
   const char* port_first = &(*it);
   char* port_last = 0;
   unsigned long value = std::strtoul(port_first, &port_last, 10);
-  return (value < std::numeric_limits<unsigned short>::max());
+  return (value <= std::numeric_limits<unsigned short>::max());
 }
 }  // namespace detail
 }  // namespace network
