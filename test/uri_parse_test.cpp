@@ -537,6 +537,11 @@ TEST(uri_parse_test, test_has_host_bug_88) {
   EXPECT_TRUE(uri.parse_uri());
 }
 
+TEST(uri_parse_test, test_max_port_value) {
+  test::uri uri("tcp://localhost:65535");
+  EXPECT_TRUE(uri.parse_uri());
+}
+
 // http://formvalidation.io/validators/uri/
 
 std::vector<std::string> create_urls(const std::string &filename) {
