@@ -101,3 +101,8 @@ if (Uri_BUILD_DOCS)
 endif()
 
 install(DIRECTORY include DESTINATION ".")
+
+install(EXPORT UriConfig
+  DESTINATION lib/cmake/Uri
+  NAMESPACE Uri::
+)
