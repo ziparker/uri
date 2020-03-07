@@ -26,7 +26,7 @@ endif()
 set(Uri_SRCS ${Uri_SRCS} PARENT_SCOPE)
 
 install(
-  TARGETS network-uri
+  TARGETS network-uri EXPORT UriConfig
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
 )
